@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave Application - Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <!-- Admin Navbar -->
+  <nav class="navbar admin-navbar">
+    <a class="navbar__brand" href="index.html"><span>&#127891;</span> LeaveEase</a>
+    <div class="admin-navbar__buttons">
+      <a href="admin_login.html" class="btn btn--outline admin-nav-btn">Admin Login</a>
+      <a href="admin_register.html" class="btn btn--primary admin-nav-btn">Admin Register</a>
+    </div>
+  </nav>
+
+  <div class="login-page has-admin-navbar">
+    <div class="login-card">
+      <div class="login-card__header">
+        <span class="login-card__icon">&#127891;</span>
+        <h1>LeaveEase</h1>
+        <p id="stepSubtitle">Select your role to continue</p>
+      </div>
+
+      <div id="alert" class="alert"></div>
+
+      <!-- Step 1: Role Selection -->
+      <div id="stepRole" class="step active">
+        <div class="role-grid">
+          <button class="role-btn" data-role="student">
+            <span>&#127891;</span> Student
+          </button>
+          <button class="role-btn" data-role="tg">
+            <span>&#128105;&#8205;&#127979;</span> Teacher Guardian
+          </button>
+          <button class="role-btn" data-role="cc">
+            <span>&#128203;</span> Class Coordinator
+          </button>
+          <button class="role-btn" data-role="hod">
+            <span>&#127963;</span> HOD
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: Register / Login Choice -->
+      <div id="stepChoice" class="step">
+        <div class="auth-choice">
+          <button id="btnGoRegister" class="choice-btn">
+            <span class="choice-btn__icon">&#128221;</span>
+            <div>
+              <div class="choice-btn__title">Register</div>
+              <div class="choice-btn__sub">Create a new account</div>
+            </div>
+          </button>
+          <button id="btnGoLogin" class="choice-btn">
+            <span class="choice-btn__icon">&#128273;</span>
+            <div>
+              <div class="choice-btn__title">Login</div>
+              <div class="choice-btn__sub">Already have an account</div>
+            </div>
+          </button>
+        </div>
+        <button class="back-btn" id="backToRole">&larr; Change Role</button>
+      </div>
+
+      <!-- Step 3: Register Form -->
+      <div id="stepRegister" class="step">
+        <form id="registerForm">
+          <div id="registerFields"></div>
+          <button type="submit" class="btn btn--primary btn--full">Register</button>
+        </form>
+        <button class="back-btn" id="backFromRegister">&larr; Back</button>
+      </div>
+
+      <!-- Step 4: Login Form -->
+      <div id="stepLogin" class="step">
+        <form id="loginForm">
+          <div id="loginFields"></div>
+          <button type="submit" class="btn btn--primary btn--full">Sign In</button>
+        </form>
+        <button class="back-btn" id="backFromLogin">&larr; Back</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
